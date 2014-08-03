@@ -12,6 +12,8 @@ Installation
 Usage
 -----
 
+Create file `gulpfile.sjs`
+
 ```js
 task 'task-name' {
   @ ['src-files'], config;
