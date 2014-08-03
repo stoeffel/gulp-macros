@@ -6,20 +6,26 @@ gulp-macros
 Installation
 ------------
 
-`npm install gulp-macros`
+`npm install sweet.js`
+`npm install sweet.js gulp-macros --save-dev`
 
 Usage
 -----
 
 ```js
-  var gulpMacros = require('gulp-macros');
+task 'default' {
+  @ ['test.js'], { read: false };
+  | mocha(mochaConfig);
+}
 
-  gulpMacros(); // =>
+task 'watch' {
+  watch 'test.js', ['default'];
+}
 ```
 
 CLI
 ---
 
 ```bash
-  $ gulp-macros
+  $ gulps [task]
 ```
