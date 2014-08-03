@@ -7,7 +7,7 @@
     "test": "mocha"
   },
   "bin": {
-    "gulps": "cli.js"
+    "gulps": "cli.sh"
   },
   "repository": {
     "type": "git",
