@@ -1,0 +1,35 @@
+{
+  "name": "gulp-macros",
+  "version": "1.0.0",
+  "description": "sweetjs macros for gulp",
+  "main": "gulp-macros.sjs",
+  "scripts": {
+    "test": "mocha"
+  },
+  "bin": {
+    "gulps": "cli.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/stoeffel/gulp-macros/gulp-macros"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "stoeffel",
+  "license": "MIT",
+  "bugs": {
+    "url": "http://github.com/stoeffel/gulp-macros/gulp-macros/issues"
+  },
+  "homepage": "http://github.com/stoeffel/gulp-macros/gulp-macros",
+  "devDependencies": {
+    "mocha": "~1.20.1",
+    "gulp": "~3.8.7",
+    "gulp-mocha": "~0.5.2",
+    "sweet.js": "~0.7.0",
+    "should": "~4.0.4"
+  },
+  "dependencies": {
+    "minimist": "*"
+  }
+}
