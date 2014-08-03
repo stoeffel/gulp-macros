@@ -13,13 +13,15 @@ Usage
 -----
 
 ```js
-task 'default' {
-  @ ['test.js'], { read: false };
-  | mocha(mochaConfig);
+task 'task-name' {
+  @ ['src-files'], config;
+  | yourTask();
+  | uglify();
+  | minify();
 }
 
 task 'watch' {
-  watch 'test.js', ['default'];
+  watch '**/*.js', ['task-name'];
 }
 ```
 
