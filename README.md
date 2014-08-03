@@ -15,6 +15,8 @@ Usage
 Create file `gulpfile.sjs`
 
 ```js
+var gulp = require('gulp');
+
 task 'task-name' {
   @ ['src-files'], config;
   | yourTask();
