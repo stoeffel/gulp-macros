@@ -45,6 +45,16 @@ let | = macro {
   }
 }
 
+let > = macro {
+  case { $name $out:expr; } => {
+    var gulp = makeIdent("gulp", #{$name});
+    letstx $gulp = [gulp];
+    return #{
+      .pipe($gulp.dest($out))
+    }
+  }
+}
+
 let watch = macro {
   case { $name $toWatch:expr, $tasks:expr ...; } => {
     var gulp = makeIdent("gulp", #{$name});
@@ -58,4 +68,5 @@ let watch = macro {
 export task 
 export @
 export | 
+export > 
 export watch 

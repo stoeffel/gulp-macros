@@ -5,7 +5,7 @@ var gulp = require('gulp'),
     };
 
 task 'default' {
-  @ 'test.js', { read: false };
+  @ 'setup.test.js', { read: false };
   | mocha(mochaConfig);
 }
 

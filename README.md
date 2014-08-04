@@ -22,6 +22,7 @@ task 'task-name' {
   | yourTask();
   | uglify();
   | minify();
+  > 'build/js'
 }
 
 task 'watch' {
@@ -33,5 +34,8 @@ CLI
 ---
 
 ```bash
-  $ gulps [task]
+$ gulps [task]
+$ gulps watch
+$ gulps build
+$ gulps
 ```
