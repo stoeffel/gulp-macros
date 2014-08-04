@@ -22,7 +22,7 @@ task 'task-name' {
   | yourTask();
   | uglify();
   | minify();
-  > 'build/js'
+  > 'build/js';
 }
 
 task 'watch' {

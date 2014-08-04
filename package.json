@@ -30,7 +30,6 @@
     "should": "~4.0.4"
   },
   "dependencies": {
-    "minimist": "*"
   },
   "tags": [
     "sweet-macros",
