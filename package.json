@@ -1,6 +1,6 @@
 {
   "name": "gulp-macros",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "sweetjs macros for gulp",
   "main": "gulp-macros.sjs",
   "scripts": {
@@ -31,5 +31,9 @@
   },
   "dependencies": {
     "minimist": "*"
-  }
+  },
+  "tags": [
+    "sweet-macros",
+    "gulp"
+  ]
 }
