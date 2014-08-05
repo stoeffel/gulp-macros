@@ -1,6 +1,6 @@
 #!/bin/bash
 
-macro="$PWD/node_modules/gulp-macros.sjs"
+macro="$PWD/node_modules/gulp-macros/gulp-macros.sjs"
 
 if [ -f "$macro" ]; then
   macro="$PWD/node_modules/gulp-macros/gulp-macros.sjs"
