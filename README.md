@@ -6,28 +6,37 @@ gulp-macros
 Installation
 ------------
 
-`npm install sweet.js`
-`npm install sweet.js gulp-macros --save-dev`
+`npm install sweet.js gulp-macros -g`
+`npm install gulp-macros --save-dev`
 
 Usage
 -----
 
 Create file `gulpfile.sjs`
 
+### Example 
 ```js
 var gulp = require('gulp');
+var coffee = require('gulp-coffee');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var sourcemaps = require('gulp-sourcemaps');
 
-task 'task-name' {
-  @ ['src-files'], config;
-  | yourTask();
-  | uglify();
-  | minify();
-  > 'build/js';
+task 'scripts' {
+  @ ['js/**/*.coffee', '!client/external/**/*.coffee'];
+    | sourcemaps.init();
+    | coffee();
+    | uglify();
+    | concat('all.min.js');
+    | sourcemaps.write();
+      > 'build/js';
 }
 
 task 'watch' {
-  watch '**/*.js', ['task-name'];
+  watch '**/*.coffee', ['scripts'];
 }
+
+task 'default' ['watch', 'scripts'] { }
 ```
 
 CLI
@@ -36,6 +45,6 @@ CLI
 ```bash
 $ gulps [task]
 $ gulps watch
-$ gulps build
+$ gulps scripts
 $ gulps
 ```
